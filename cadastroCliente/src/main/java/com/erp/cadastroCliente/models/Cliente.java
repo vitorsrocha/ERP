@@ -1,18 +1,22 @@
 package com.erp.cadastroCliente.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Data
 public class Cliente implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
-    private long id;
+    private Long id;
 
-    private String name;
+    @Column(nullable = false)
+    private String nome;
     private String telefone;
+
 }
