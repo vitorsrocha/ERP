@@ -7,12 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
 
-@RestController
-@RequestMapping("/clientes")
+@RestController // indica que sera uma class de controller
+@RequestMapping("/clientes") //mapear URLs
 public class Clientes {
 
     @Autowired
